@@ -1,0 +1,283 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.backgroudImg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background: #161623;
+    background-attachment: local;
+    padding-bottom: 30px;
+    
+}
+
+/* .backgroudImg::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(#f00,#f0f);
+    clip-path: circle(30% at 80% 50%);
+}
+
+.backgroudImg::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3,#e91e63);
+    clip-path: circle(20% at 10% 10%);
+} */
+
+.myCard
+{
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: rgb(211, 203, 203);
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.myCardWrapper
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+
+.myCard:hover
+{
+    height: 350px;
+
+}
+
+.imgBox
+{
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translate(-50%);
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    background: rgb(162, 153, 153);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+}
+
+.myCard:hover .imgBox
+{
+    width: 200px;
+    height: 200px;
+}
+
+.imgBox img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.myCard__content
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+
+.details
+{
+    padding: 40px 30px 20px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(115px);
+
+
+}
+
+.gitBut
+{
+    width: 3em;
+    height: 3em;
+    margin: 8px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.gitBut:hover
+{
+    color: rgb(2, 1, 1);
+}
+
+.myCard:hover .myCard__content .details
+{
+    transform: translateY(0px);
+}
+
+
+
+.details h2
+{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+    
+
+}
+
+.details h2 span
+{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.7;
+
+}
+
+.aboutMe
+{
+    margin-top: 15px;
+}
+
+.aboutMe h3
+{
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container .card
+{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    
+}
+
+.container .card .content
+{
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+    padding: 10px;
+
+}
+
+.container .card:hover .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+.image
+{
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+    opacity: 0.3;
+    position: absolute;
+    top: -120px;
+    right: 0px;
+}
+
+.image--todo {
+    width: 400px;
+    height: 120%;
+    top: -50px;
+}
+
+.container .card .content h3
+{
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+
+.container .card .content p
+{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    margin: 150px 0 0px 0;
+
+}
+
+.container .card .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.595);
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
